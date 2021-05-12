@@ -33,6 +33,7 @@ namespace ControleUtilisateurPerceptron
             this.ucZoneDessin1 = new ControleUtilisateurPerceptron.ucZoneDessin();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnOk = new System.Windows.Forms.Button();
+            this.txtEcriture = new System.Windows.Forms.TextBox();
             this.grpDessin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,17 +65,29 @@ namespace ControleUtilisateurPerceptron
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
             // 
+            // txtEcriture
+            // 
+            this.txtEcriture.BackColor = System.Drawing.Color.White;
+            this.txtEcriture.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEcriture.Location = new System.Drawing.Point(16, 190);
+            this.txtEcriture.Multiline = true;
+            this.txtEcriture.Name = "txtEcriture";
+            this.txtEcriture.Size = new System.Drawing.Size(331, 95);
+            this.txtEcriture.TabIndex = 3;
+            // 
             // ucEcriture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtEcriture);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.grpDessin);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucEcriture";
-            this.Size = new System.Drawing.Size(661, 304);
+            this.Size = new System.Drawing.Size(371, 304);
             this.grpDessin.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,5 +97,6 @@ namespace ControleUtilisateurPerceptron
         private System.Windows.Forms.GroupBox grpDessin;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.TextBox txtEcriture;
     }
 }
