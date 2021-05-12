@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TPARCHIPERCEPTRON.Metier
+namespace TPARCHIPERCEPTRON.Modele
 {
     /// <summary>
     /// Gère les fonctionnalités de l'application. Entre autre, permet de :
@@ -13,7 +13,7 @@ namespace TPARCHIPERCEPTRON.Metier
     {
         private Dictionary<string, Perceptron> _lstPerceptrons;
         private List<CoordDessin> _lstCoordonnes;
-        private AccesDonnees.IGestionFichiers _gestionFichiers;
+        private IGestionFichiers _gestionFichiers;
 
         /// <summary>
         /// Constructeur
@@ -22,7 +22,7 @@ namespace TPARCHIPERCEPTRON.Metier
         {
             _lstPerceptrons = new Dictionary<string, Perceptron>();
             _lstCoordonnes = new List<CoordDessin>();
-            _gestionFichiers = new AccesDonnees.GestionFichiersSorties();
+            _gestionFichiers = new GestionFichiersSorties();
         }
 
         /// <summary>

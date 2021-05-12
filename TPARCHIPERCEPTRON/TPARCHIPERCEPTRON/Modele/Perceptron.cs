@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace TPARCHIPERCEPTRON.Metier
+namespace TPARCHIPERCEPTRON.Modele
 {
     /// <summary>
     /// Classe du perceptron. Permet de faire l'apprentissage automatique sur un échantillon d'apprentissage. 

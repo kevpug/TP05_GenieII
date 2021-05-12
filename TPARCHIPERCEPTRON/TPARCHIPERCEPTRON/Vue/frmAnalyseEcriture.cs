@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Windows.Forms;
+using TPARCHIPERCEPTRON.Modele;
 
 namespace TPARCHIPERCEPTRON
 {
@@ -11,7 +12,7 @@ namespace TPARCHIPERCEPTRON
     public partial class frmAnalyseEcriture : Form
     {
 
-        private Metier.IGestionPerceptron _gcpAnalyseEcriture;
+        private IGestionPerceptron _gcpAnalyseEcriture;
         private string _fichier = "";
 
         /// <summary>
@@ -21,7 +22,7 @@ namespace TPARCHIPERCEPTRON
         {
             InitializeComponent();
             _fichier = ConfigurationManager.AppSettings["FichierApp"];
-            _gcpAnalyseEcriture = new Metier.GestionClassesPerceptrons();
+            _gcpAnalyseEcriture = new GestionClassesPerceptrons();
             ucDessin.Width = CstApplication.TAILLEDESSINX;
             ucDessin.Height = CstApplication.TAILLEDESSINY;
             _gcpAnalyseEcriture.ChargerCoordonnees(_fichier);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using TPARCHIPERCEPTRON.Modele;
 
 namespace TPARCHIPERCEPTRON
 {
@@ -9,7 +10,7 @@ namespace TPARCHIPERCEPTRON
     /// </summary>
     public partial class ucZoneDessin : UserControl
     {
-        private Metier.CoordDessin _coordonnees;
+        private CoordDessin _coordonnees;
         private Graphics _objGraphics;
 
         private bool _doitDessiner = false; // determines whether to paint
@@ -17,7 +18,7 @@ namespace TPARCHIPERCEPTRON
         private int _hauteur;
 
 
-        public Metier.CoordDessin Coordonnees
+        public CoordDessin Coordonnees
         {
             get { return _coordonnees; }
         }
@@ -33,7 +34,7 @@ namespace TPARCHIPERCEPTRON
             _hauteur = CstApplication.TAILLEDESSINX;
             pZoneDessin.Image = new Bitmap(_largeur, _hauteur);
             _objGraphics = Graphics.FromImage(pZoneDessin.Image);
-            _coordonnees = new Metier.CoordDessin(_largeur, _hauteur);
+            _coordonnees = new CoordDessin(_largeur, _hauteur);
         }
 
         /// <summary>
@@ -70,10 +71,10 @@ namespace TPARCHIPERCEPTRON
         /// </summary>
         public void EffacerDessin()
         {
-            _coordonnees = new Metier.CoordDessin(_largeur, _hauteur);
+            _coordonnees = new CoordDessin(_largeur, _hauteur);
             _objGraphics.Clear(pZoneDessin.BackColor);
             pZoneDessin.Refresh();
-            _coordonnees = new Metier.CoordDessin(_largeur, _hauteur);
+            _coordonnees = new CoordDessin(_largeur, _hauteur);
 
         }
 

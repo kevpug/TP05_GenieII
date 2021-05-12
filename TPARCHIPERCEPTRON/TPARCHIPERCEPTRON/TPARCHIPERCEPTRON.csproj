@@ -47,13 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccesDonnees\IGestionFichiers.cs" />
-    <Compile Include="Metier\GestionClassesPerceptrons.cs" />
-    <Compile Include="Metier\CoordDessin.cs" />
-    <Compile Include="Metier\IGestionPerceptron.cs" />
-    <Compile Include="Metier\Perceptron.cs" />
+    <Compile Include="Modele\IGestionFichiers.cs" />
+    <Compile Include="Modele\GestionClassesPerceptrons.cs" />
+    <Compile Include="Modele\CoordDessin.cs" />
+    <Compile Include="Modele\IGestionPerceptron.cs" />
+    <Compile Include="Modele\Perceptron.cs" />
     <Compile Include="CstApplication.cs" />
-    <Compile Include="AccesDonnees\GestionFichiersSorties.cs" />
+    <Compile Include="Modele\GestionFichiersSorties.cs" />
     <Compile Include="Vue\frmAnalyseEcriture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,7 +95,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Presentation\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace TPARCHIPERCEPTRON.AccesDonnees
+namespace TPARCHIPERCEPTRON.Modele
 {
     /// <summary>
     /// Cette classe gère l'accès aux disques pour le fichiers d'apprentissages. 
@@ -14,10 +14,10 @@ namespace TPARCHIPERCEPTRON.AccesDonnees
         /// Permet d'extraire un fichier texte dans une matrice pour l'apprentissage automatique.
         /// </summary>
         /// <param name="fichier">Fichier où extraire les données</param>
-        public List<Metier.CoordDessin> ChargerCoordonnees(string fichier)
+        public List<CoordDessin> ChargerCoordonnees(string fichier)
         {
-            Metier.CoordDessin coord;
-            List<Metier.CoordDessin> lstCoord = new List<Metier.CoordDessin>();
+            CoordDessin coord;
+            List<CoordDessin> lstCoord = new List<CoordDessin>();
             StreamReader reader;
             string sLigne;
 
@@ -27,7 +27,7 @@ namespace TPARCHIPERCEPTRON.AccesDonnees
                 while (!reader.EndOfStream)
                 {
                     sLigne = reader.ReadLine();
-                    coord = new Metier.CoordDessin(CstApplication.TAILLEDESSINX, CstApplication.TAILLEDESSINY);
+                    coord = new CoordDessin(CstApplication.TAILLEDESSINX, CstApplication.TAILLEDESSINY);
 
                     string[] tabEntree = sLigne.Split('\t');
                     coord.Reponse = tabEntree[0];
@@ -50,14 +50,14 @@ namespace TPARCHIPERCEPTRON.AccesDonnees
         /// Permet de sauvegarder dans fichier texte dans une matrice pour l'apprentissage automatique
         /// </summary>
         /// <param name="fichier">Fichier où extraire les données</param>
-        public int SauvegarderCoordonnees(string fichier, List<Metier.CoordDessin> lstCoord)
+        public int SauvegarderCoordonnees(string fichier, List<CoordDessin> lstCoord)
         {
             try
             {
                 MelangerEchantillon(lstCoord);
                 StreamWriter writer = new StreamWriter(fichier);
 
-                foreach (Metier.CoordDessin c in lstCoord)
+                foreach (CoordDessin c in lstCoord)
                 {
                     writer.Write(c.Reponse + "\t");
                     for (int i = 0; i < c.BitArrayDessin.Length - 1; i++)
@@ -78,13 +78,13 @@ namespace TPARCHIPERCEPTRON.AccesDonnees
         /// Permet de mélanger aléatoirement les échantillons d'apprentissages(coordonnées) dans le but d'améliorer l'apprentissage.
         /// </summary>
         /// <param name="lstCoord">Les coordonnées à mélanger</param>
-        private void MelangerEchantillon(List<Metier.CoordDessin> lstCoord)
+        private void MelangerEchantillon(List<CoordDessin> lstCoord)
         {
             Random r1 = new Random();
             Random r2 = new Random();
             int index1;
             int index2;
-            Metier.CoordDessin coordTemp;
+            CoordDessin coordTemp;
 
             for (int i = 0; i < CstApplication.MAXITERATION; i++)
             {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TPARCHIPERCEPTRON.AccesDonnees
+namespace TPARCHIPERCEPTRON.Modele
 {
     /// <summary>
     /// Auteur :      Hugo St-Louis
@@ -12,8 +12,8 @@ namespace TPARCHIPERCEPTRON.AccesDonnees
     /// </summary>
     public interface IGestionFichiers
     {
-        List<Metier.CoordDessin> ChargerCoordonnees(string fichier);
-        int SauvegarderCoordonnees(string fichier, List<Metier.CoordDessin> lstCoord);
+        List<CoordDessin> ChargerCoordonnees(string fichier);
+        int SauvegarderCoordonnees(string fichier, List<CoordDessin> lstCoord);
 
     }
 }
