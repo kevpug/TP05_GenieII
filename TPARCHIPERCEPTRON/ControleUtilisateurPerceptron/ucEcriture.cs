@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ControleUtilisateurPerceptron
 {
-    public partial class CUEntrainement: UserControl
+    public partial class ucEcriture : UserControl
     {
-        public CUEntrainement()
+        public ucEcriture()
         {
             InitializeComponent();
         }
