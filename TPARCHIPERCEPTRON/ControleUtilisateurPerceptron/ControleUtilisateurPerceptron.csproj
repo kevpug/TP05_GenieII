@@ -44,17 +44,17 @@
   <ItemGroup>
     <Compile Include="CoordDessin.cs" />
     <Compile Include="CstApplication.cs" />
-    <Compile Include="CUEcriture.cs">
+    <Compile Include="ucEcriture.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CUEcriture.Designer.cs">
-      <DependentUpon>CUEcriture.cs</DependentUpon>
+    <Compile Include="ucEcriture.Designer.cs">
+      <DependentUpon>ucEcriture.cs</DependentUpon>
     </Compile>
-    <Compile Include="CUEntrainement.cs">
+    <Compile Include="ucEntrainement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CUEntrainement.Designer.cs">
-      <DependentUpon>CUEntrainement.cs</DependentUpon>
+    <Compile Include="ucEntrainement.Designer.cs">
+      <DependentUpon>ucEntrainement.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ucZoneDessin.cs">
@@ -66,11 +66,11 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CUEcriture.resx">
-      <DependentUpon>CUEcriture.cs</DependentUpon>
+    <EmbeddedResource Include="ucEcriture.resx">
+      <DependentUpon>ucEcriture.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CUEntrainement.resx">
-      <DependentUpon>CUEntrainement.cs</DependentUpon>
+    <EmbeddedResource Include="ucEntrainement.resx">
+      <DependentUpon>ucEntrainement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucZoneDessin.resx">
       <DependentUpon>ucZoneDessin.cs</DependentUpon>
