@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.IO;
 
-namespace TPARCHIPERCEPTRON.Modele
+namespace ControleUtilisateurPerceptron
 {
     /// <summary>
     /// Gère la structure de données qui contient le caractères et les coordonnées des points du dessin de ce caractère

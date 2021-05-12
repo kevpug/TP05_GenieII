@@ -1,4 +1,6 @@
-﻿namespace TPARCHIPERCEPTRON
+﻿using ControleUtilisateurPerceptron;
+
+namespace TPARCHIPERCEPTRON
 {
     partial class frmAnalyseEcriture
     {
@@ -35,7 +37,7 @@
             this.btnEntrainement = new System.Windows.Forms.Button();
             this.grpDessinEntrainement = new System.Windows.Forms.GroupBox();
             this.btnEffacer = new System.Windows.Forms.Button();
-            this.ucDessin = new TPARCHIPERCEPTRON.ucZoneDessin();
+            this.ucDessin = new ucZoneDessin();
             this.grpTests = new System.Windows.Forms.GroupBox();
             this.lblValeurTestee = new System.Windows.Forms.Label();
             this.txtValeurTestee = new System.Windows.Forms.TextBox();

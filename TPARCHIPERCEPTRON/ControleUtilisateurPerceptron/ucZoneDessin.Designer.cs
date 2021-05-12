@@ -1,4 +1,5 @@
-﻿namespace TPARCHIPERCEPTRON
+﻿
+namespace ControleUtilisateurPerceptron
 {
     partial class ucZoneDessin
     {

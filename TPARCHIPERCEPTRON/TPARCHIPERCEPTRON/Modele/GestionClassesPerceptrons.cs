@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using ControleUtilisateurPerceptron;
+using System.Collections.Generic;
 
 namespace TPARCHIPERCEPTRON.Modele
 {
