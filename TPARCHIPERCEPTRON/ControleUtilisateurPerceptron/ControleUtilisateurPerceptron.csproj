@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CoordDessin.cs" />
-    <Compile Include="CstApplication.cs" />
+    <Compile Include="Modele\CoordDessin.cs" />
+    <Compile Include="Modele\CstApplication.cs" />
     <Compile Include="Modele\GestionClassesPerceptrons.cs" />
     <Compile Include="Modele\GestionFichiersSorties.cs" />
     <Compile Include="Modele\Perceptron.cs" />

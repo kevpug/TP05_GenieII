@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControleUtilisateurPerceptron.Modele;
+using System;
 
 namespace ControleUtilisateurPerceptron.Vue
 {

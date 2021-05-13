@@ -1,4 +1,5 @@
-﻿using ControleUtilisateurPerceptron.Presentation;
+﻿using ControleUtilisateurPerceptron.Modele;
+using ControleUtilisateurPerceptron.Presentation;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;

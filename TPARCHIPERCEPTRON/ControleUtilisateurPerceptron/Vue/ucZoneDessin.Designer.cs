@@ -1,4 +1,6 @@
 ﻿
+using ControleUtilisateurPerceptron.Modele;
+
 namespace ControleUtilisateurPerceptron.Vue
 {
     partial class ucZoneDessin

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace ControleUtilisateurPerceptron
+namespace ControleUtilisateurPerceptron.Modele
 {
     /// <summary>
     /// Gère la structure de données qui contient le caractères et les coordonnées des points du dessin de ce caractère

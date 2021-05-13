@@ -1,5 +1,5 @@
 ﻿
-namespace ControleUtilisateurPerceptron
+namespace ControleUtilisateurPerceptron.Modele
 {
     /// <summary>
     /// Classe de constantes de l'application.

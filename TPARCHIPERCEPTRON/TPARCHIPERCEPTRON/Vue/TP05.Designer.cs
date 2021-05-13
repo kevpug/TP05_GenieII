@@ -39,7 +39,7 @@ namespace TPARCHIPERCEPTRON.Vue
             this.ucEcriture1.CheminFichierEntrainement = "FichierEntrainement.dat";
             this.ucEcriture1.ConstanteApprentissage = 0.01D;
             this.ucEcriture1.Location = new System.Drawing.Point(19, 195);
-            this.ucEcriture1.modePhrase = true;
+            this.ucEcriture1.modePhrase = false;
             this.ucEcriture1.Name = "ucEcriture1";
             this.ucEcriture1.Size = new System.Drawing.Size(278, 247);
             this.ucEcriture1.TabIndex = 1;
