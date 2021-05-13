@@ -1,5 +1,4 @@
-﻿using ControleUtilisateurPerceptron;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace ControleUtilisateurPerceptron.Modele
 {
@@ -68,9 +67,9 @@ namespace ControleUtilisateurPerceptron.Modele
                 _lstPerceptrons.Add(reponse, new Perceptron(reponse, _constanteApprentissage));
             coordo.Reponse = reponse;
             _lstCoordonnes.Add(coordo);
-            
+
             foreach (Perceptron p in _lstPerceptrons.Values)
-                sConsole+= p.Entrainement(_lstCoordonnes);
+                sConsole += p.Entrainement(_lstCoordonnes);
 
             return sConsole;
         }
@@ -85,7 +84,7 @@ namespace ControleUtilisateurPerceptron.Modele
         {
             string resultat = "";
             bool valeur;
-            
+
             foreach (Perceptron p in _lstPerceptrons.Values)
             {
                 valeur = p.TesterNeurone(coord);

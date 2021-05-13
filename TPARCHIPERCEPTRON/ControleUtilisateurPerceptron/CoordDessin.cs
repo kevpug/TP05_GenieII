@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Drawing;
-using System.IO;
 
 namespace ControleUtilisateurPerceptron
 {

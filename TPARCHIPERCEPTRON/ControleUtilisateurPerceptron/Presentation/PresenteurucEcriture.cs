@@ -1,10 +1,6 @@
 ﻿using ControleUtilisateurPerceptron.Modele;
 using ControleUtilisateurPerceptron.Vue;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControleUtilisateurPerceptron.Presentation
 {
@@ -45,7 +41,7 @@ namespace ControleUtilisateurPerceptron.Presentation
         private void Ecriture(object sender, EventArgs e)
         {
             string sValeur = _gestionClassesPerceptron.TesterPerceptron(_vue.Dessin);
-            if(sValeur == " " && _vue.modePhrase)
+            if (sValeur == " " && _vue.modePhrase)
                 _vue.TextConsole = "";
             else if (_vue.modePhrase)
                 _vue.TextConsole += sValeur;

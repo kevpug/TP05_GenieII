@@ -1,10 +1,6 @@
 ﻿using ControleUtilisateurPerceptron.Modele;
 using ControleUtilisateurPerceptron.Vue;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControleUtilisateurPerceptron.Presentation
 {
