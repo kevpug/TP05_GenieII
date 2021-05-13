@@ -68,7 +68,6 @@ namespace ControleUtilisateurPerceptron.Vue
             // txtEcriture
             // 
             this.txtEcriture.BackColor = System.Drawing.Color.White;
-            this.txtEcriture.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEcriture.Location = new System.Drawing.Point(16, 190);
             this.txtEcriture.Multiline = true;
             this.txtEcriture.Name = "txtEcriture";
