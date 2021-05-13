@@ -15,8 +15,8 @@ namespace ControleUtilisateurPerceptron.Presentation
         public PresenteurucEntrainement(IucEntrainement vue)
         {
             _vue = vue;
-            _vue.EntrainementEvt += Entrainement;
             _gestionClassesPerceptron = new GestionClassesPerceptrons();
+            _vue.EntrainementEvt += Entrainement;
         }
 
         private void Entrainement(object sender, EventArgs e)

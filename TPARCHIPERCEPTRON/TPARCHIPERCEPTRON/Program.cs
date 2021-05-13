@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using TPARCHIPERCEPTRON.Vue;
 
 namespace TPARCHIPERCEPTRON
 {
@@ -15,7 +16,7 @@ namespace TPARCHIPERCEPTRON
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAnalyseEcriture());
+            Application.Run(new TP05());
         }
     }
 }

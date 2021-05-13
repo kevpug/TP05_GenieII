@@ -77,11 +77,10 @@ namespace ControleUtilisateurPerceptron.Vue
                 EntrainementEvt(sender, e);
 
         }
+
         private void btnEffacer_Click(object sender, EventArgs e)
         {
             ucDessin.EffacerDessin();
         }
-
-        
     }
 }
