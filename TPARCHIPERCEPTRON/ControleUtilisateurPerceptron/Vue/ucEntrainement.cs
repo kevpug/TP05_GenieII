@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ControleUtilisateurPerceptron.Vue
 {
-    public partial class ucEntrainement : UserControl
+    public partial class ucEntrainement : UserControl, IucEntrainement
     {
         private string _cheminFichierEntrainement = "";
         private bool _utiliserNouveauFichier;
@@ -53,9 +53,8 @@ namespace ControleUtilisateurPerceptron.Vue
                 _constanteApprentissage = value;
             }
         }
-        public delegate void EntrainementButtonClockHandler(object sender, EventArgs e);
         [Category("Entrainement Events")]
-        public event EntrainementButtonClockHandler _entrainementEvt;
+        public event EventHandler _entrainementEvt;
 
         public ucEntrainement()
         {

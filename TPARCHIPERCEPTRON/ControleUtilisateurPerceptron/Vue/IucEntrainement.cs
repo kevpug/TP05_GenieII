@@ -8,11 +8,10 @@ namespace ControleUtilisateurPerceptron.Vue
 {
     public interface IucEntrainement
     {
-        public string Console { get; set; }
-        public string NomFichier { get; }
+        string CheminFichierEntrainement { get; set; }
+        bool UtiliserNouveauFichier { get; set; }
+        double ConstanteApprentissage { get; set; }
 
-        void Close();
-        event EventHandler LectureFichierEvt;
-        event EventHandler FermetureFenetreEvt;
+        event EventHandler _entrainementEvt;
     }
 }
