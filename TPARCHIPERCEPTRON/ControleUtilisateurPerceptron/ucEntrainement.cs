@@ -10,11 +10,70 @@ using System.Windows.Forms;
 
 namespace ControleUtilisateurPerceptron
 {
-    public partial class ucEntrainement: UserControl
+    public partial class ucEntrainement : UserControl
     {
+        private string _cheminFichierEntrainement = "";
+        private bool _utiliserNouveauFichier;
+        private double _constanteApprentissage;
+
+        [Category("Parametre Entrainement")]
+        public string CheminFichierEntrainement
+        {
+            get
+            {
+                return _cheminFichierEntrainement;
+            }
+            set
+            {
+                _cheminFichierEntrainement = value;
+            }
+        }
+        [Category("Parametre Entrainement")]
+        public bool UtiliserNouveauFichier
+        {
+            get
+            {
+                return _utiliserNouveauFichier;
+            }
+            set
+            {
+                _utiliserNouveauFichier = value;
+            }
+        }
+
+        [Category("Parametre Entrainement")]
+        public double ConstanteApprentissage
+        {
+            get
+            {
+                return _constanteApprentissage;
+            }
+            set
+            {
+                _constanteApprentissage = value;
+            }
+        }
+        public delegate void EntrainementButtonClockHandler(object sender, EventArgs e);
+        [Category("Entrainement Events")]
+        public event EntrainementButtonClockHandler _entrainementEvt;
+
         public ucEntrainement()
         {
             InitializeComponent();
+        }
+
+        private void btnEntrainement_Click(object sender, EventArgs e)
+        {
+            if (_entrainementEvt is object)
+            {
+                _entrainementEvt(sender, e);
+                //Logique application ici pour entrainement
+            }
+
+        }
+        private void btnEffacer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

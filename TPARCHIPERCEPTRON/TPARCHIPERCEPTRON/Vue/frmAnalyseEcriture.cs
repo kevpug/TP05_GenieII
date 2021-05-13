@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Windows.Forms;
-using TPARCHIPERCEPTRON.Modele;
+using ControleUtilisateurPerceptron.Modele;
 
 namespace TPARCHIPERCEPTRON
 {

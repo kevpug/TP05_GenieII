@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace TPARCHIPERCEPTRON.Modele
+namespace ControleUtilisateurPerceptron.Modele
 {
     /// <summary>
     /// Cette classe gère l'accès aux disques pour le fichiers d'apprentissages. 

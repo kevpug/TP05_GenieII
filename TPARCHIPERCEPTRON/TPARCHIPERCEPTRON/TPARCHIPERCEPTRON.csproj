@@ -47,12 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modele\IGestionFichiers.cs" />
-    <Compile Include="Modele\GestionClassesPerceptrons.cs" />
-    <Compile Include="Modele\IGestionPerceptron.cs" />
-    <Compile Include="Modele\Perceptron.cs" />
     <Compile Include="CstApplication.cs" />
-    <Compile Include="Modele\GestionFichiersSorties.cs" />
     <Compile Include="Vue\frmAnalyseEcriture.cs">
       <SubType>Form</SubType>
     </Compile>

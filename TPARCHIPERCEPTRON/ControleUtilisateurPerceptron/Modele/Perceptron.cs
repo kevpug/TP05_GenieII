@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace TPARCHIPERCEPTRON.Modele
+namespace ControleUtilisateurPerceptron.Modele
 {
     /// <summary>
     /// Classe du perceptron. Permet de faire l'apprentissage automatique sur un échantillon d'apprentissage. 

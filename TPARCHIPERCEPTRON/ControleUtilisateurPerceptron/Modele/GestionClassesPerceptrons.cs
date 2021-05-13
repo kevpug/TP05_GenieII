@@ -1,7 +1,7 @@
 ﻿using ControleUtilisateurPerceptron;
 using System.Collections.Generic;
 
-namespace TPARCHIPERCEPTRON.Modele
+namespace ControleUtilisateurPerceptron.Modele
 {
     /// <summary>
     /// Gère les fonctionnalités de l'application. Entre autre, permet de :

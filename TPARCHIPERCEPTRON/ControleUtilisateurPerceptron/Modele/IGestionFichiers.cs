@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TPARCHIPERCEPTRON.Modele
+namespace ControleUtilisateurPerceptron.Modele
 {
     /// <summary>
     /// Auteur :      Hugo St-Louis
