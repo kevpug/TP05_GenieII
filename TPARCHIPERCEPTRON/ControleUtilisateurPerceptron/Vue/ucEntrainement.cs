@@ -67,9 +67,9 @@ namespace ControleUtilisateurPerceptron.Vue
 
         private void btnEntrainement_Click(object sender, EventArgs e)
         {
-            if (_entrainementEvt is object)
+            if (EntrainementEvt is object)
             {
-                _entrainementEvt(sender, e);
+                EntrainementEvt(sender, e);
                 //Logique application ici pour entrainement
             }
 

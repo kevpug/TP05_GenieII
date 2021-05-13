@@ -83,7 +83,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ControleUtilisateurPerceptron\ControleUtilisateurPerceptron.csproj">
       <Project>{dc1203d2-e701-4403-9818-f924283518c2}</Project>

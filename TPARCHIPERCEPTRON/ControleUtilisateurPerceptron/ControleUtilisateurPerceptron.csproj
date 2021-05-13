@@ -52,6 +52,7 @@
     <Compile Include="Modele\IGestionFichiers.cs" />
     <Compile Include="Modele\IGestionPerceptron.cs" />
     <Compile Include="Modele\Perceptron.cs" />
+    <Compile Include="Presentation\PresenteurucEntrainement.cs" />
     <Compile Include="Vue\IucEcriture.cs" />
     <Compile Include="Vue\IucEntrainement.cs" />
     <Compile Include="Vue\ucEcriture.cs">
@@ -86,8 +87,6 @@
       <DependentUpon>ucZoneDessin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentation\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
