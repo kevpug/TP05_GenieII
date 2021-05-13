@@ -75,6 +75,7 @@ namespace ControleUtilisateurPerceptron.Vue
         {
             if (EntrainementEvt is object)
                 EntrainementEvt(sender, e);
+            ucDessin.EffacerDessin();
 
         }
 

@@ -16,5 +16,10 @@ namespace TPARCHIPERCEPTRON.Vue
         {
             InitializeComponent();
         }
+
+        private void ucEntrainement1_EntrainementEvt(object sender, EventArgs e)
+        {
+            //Code supplémentaire au besoin traitement bouton entrainement...
+        }
     }
 }

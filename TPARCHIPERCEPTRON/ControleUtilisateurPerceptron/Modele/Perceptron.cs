@@ -23,9 +23,9 @@ namespace ControleUtilisateurPerceptron.Modele
         /// Constructeur de la classe. Crée un perceptron pour une réponse(caractère) qu'on veut identifier le pattern(modèle)
         /// </summary>
         /// <param name="reponse">La classe que défini le perceptron</param>
-        public Perceptron(string reponse)
+        public Perceptron(string reponse, double constanteApprentissage)
         {
-            _cstApprentissage = CstApplication.CONSTANTEAPPRENTISSAGE;
+            _cstApprentissage = constanteApprentissage;
             _reponse = reponse;
         }
 

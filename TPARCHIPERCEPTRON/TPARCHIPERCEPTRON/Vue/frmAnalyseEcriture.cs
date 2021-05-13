@@ -12,7 +12,7 @@ namespace TPARCHIPERCEPTRON
     public partial class frmAnalyseEcriture : Form
     {
 
-        private IGestionPerceptron _gcpAnalyseEcriture;
+        //private IGestionPerceptron _gcpAnalyseEcriture;
         private string _fichier = "";
 
         /// <summary>
@@ -22,10 +22,10 @@ namespace TPARCHIPERCEPTRON
         {
             InitializeComponent();
             _fichier = ConfigurationManager.AppSettings["FichierApp"];
-            _gcpAnalyseEcriture = new GestionClassesPerceptrons();
+            //_gcpAnalyseEcriture = new GestionClassesPerceptrons();
             ucDessin.Width = CstApplication.TAILLEDESSINX;
             ucDessin.Height = CstApplication.TAILLEDESSINY;
-            _gcpAnalyseEcriture.ChargerCoordonnees(_fichier);
+            //_gcpAnalyseEcriture.ChargerCoordonnees(_fichier);
         }
 
 
@@ -40,7 +40,7 @@ namespace TPARCHIPERCEPTRON
                 MessageBox.Show("Vous devez entrer au moins une valeur à faire apprendre.");
             else
             {
-                txtConsole.Text = _gcpAnalyseEcriture.Entrainement(ucDessin.Coordonnees, txtValeurEntrainee.Text);
+               // txtConsole.Text = _gcpAnalyseEcriture.Entrainement(ucDessin.Coordonnees, txtValeurEntrainee.Text);
                 //ucDessin.EffacerDessin();
             }
         }
@@ -52,7 +52,7 @@ namespace TPARCHIPERCEPTRON
         /// <param name="e"></param>
         private void btnTest_Click(object sender, EventArgs e)
         {
-            txtValeurTestee.Text = _gcpAnalyseEcriture.TesterPerceptron(ucDessin.Coordonnees);
+           // txtValeurTestee.Text = _gcpAnalyseEcriture.TesterPerceptron(ucDessin.Coordonnees);
             txtConsole.Text = txtValeurTestee.Text;
         }
 
@@ -73,7 +73,7 @@ namespace TPARCHIPERCEPTRON
         /// <param name="e"></param>
         private void frmAnalyseEcriture_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _gcpAnalyseEcriture.SauvegarderCoordonnees(_fichier);
+          //  _gcpAnalyseEcriture.SauvegarderCoordonnees(_fichier);
         }
     }
 }

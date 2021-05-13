@@ -49,8 +49,6 @@
     <Compile Include="CstApplication.cs" />
     <Compile Include="Modele\GestionClassesPerceptrons.cs" />
     <Compile Include="Modele\GestionFichiersSorties.cs" />
-    <Compile Include="Modele\IGestionFichiers.cs" />
-    <Compile Include="Modele\IGestionPerceptron.cs" />
     <Compile Include="Modele\Perceptron.cs" />
     <Compile Include="Presentation\PresenteurucEcriture.cs" />
     <Compile Include="Presentation\PresenteurucEntrainement.cs" />

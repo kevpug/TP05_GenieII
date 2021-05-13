@@ -19,6 +19,7 @@ namespace ControleUtilisateurPerceptron.Vue
         private PresenteurucEcriture _presentateur;
 
         public event EventHandler EcritureEvt;
+        public event EventHandler SauvegardeEvt;
 
         [Category("Parametre Ecriture")]
         public string CheminFichierEntrainement
@@ -57,6 +58,7 @@ namespace ControleUtilisateurPerceptron.Vue
         {
             if (EcritureEvt is object)
                 EcritureEvt(sender, e);
+            ucDessin.EffacerDessin();
         }
     }
 }

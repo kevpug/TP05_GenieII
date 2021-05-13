@@ -9,7 +9,7 @@ namespace ControleUtilisateurPerceptron.Modele
     /// Cette classe gère l'accès aux disques pour le fichiers d'apprentissages. 
     /// Permet de charger ou décharger dans la matrice d'apprentissage.
     /// </summary>
-    public class GestionFichiersSorties : IGestionFichiers
+    public class GestionFichiersSorties
     {
         /// <summary>
         /// Permet d'extraire un fichier texte dans une matrice pour l'apprentissage automatique.

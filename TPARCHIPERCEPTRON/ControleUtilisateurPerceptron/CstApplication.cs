@@ -10,8 +10,7 @@ namespace ControleUtilisateurPerceptron
         //Taille maximale de l'interface de dessin.
         public const int TAILLEDESSINY = 64;
         public const int TAILLEDESSINX = 64;
-        //Constante d'apprentissage pour le perceptron
-        public const double CONSTANTEAPPRENTISSAGE = 0.01;
+        
         //Critère de convergence pour le perceptron.
         public const int MAXITERATION = 20;
         public const int POURCENTCONVERGENCE = 96;

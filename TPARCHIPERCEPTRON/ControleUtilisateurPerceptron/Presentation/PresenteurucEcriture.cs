@@ -15,15 +15,15 @@ namespace ControleUtilisateurPerceptron.Presentation
 
         public PresenteurucEcriture(IucEcriture vue)
         {
-            _gestionClassesPerceptron = new GestionClassesPerceptrons();
             _vue = vue;
-           _vue.EcritureEvt += Ecriture;
+            _gestionClassesPerceptron = new GestionClassesPerceptrons(_vue.ConstanteApprentissage);
+            _vue.EcritureEvt += Ecriture;
         }
 
         private void Ecriture(object sender, EventArgs e)
         {
             string sValeur = _gestionClassesPerceptron.TesterPerceptron(_vue.Dessin);
-            if(sValeur == " ")
+            if(sValeur == " " && _vue.modePhrase)
                 _vue.TextConsole = "";
             else if (_vue.modePhrase)
                 _vue.TextConsole += sValeur;

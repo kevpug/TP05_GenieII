@@ -15,7 +15,10 @@ namespace ControleUtilisateurPerceptron.Presentation
         public PresenteurucEntrainement(IucEntrainement vue)
         {
             _vue = vue;
-            _gestionClassesPerceptron = new GestionClassesPerceptrons();
+            //Logique pour que la valeur ne soit pas a 0.00...
+            _gestionClassesPerceptron = new GestionClassesPerceptrons(_vue.ConstanteApprentissage == 0.00 ? 0.01 : _vue.ConstanteApprentissage);
+            if(!_vue.UtiliserNouveauFichier)
+                _gestionClassesPerceptron.ChargerCoordonnees(_vue.CheminFichierEntrainement);
             _vue.EntrainementEvt += Entrainement;
         }
 

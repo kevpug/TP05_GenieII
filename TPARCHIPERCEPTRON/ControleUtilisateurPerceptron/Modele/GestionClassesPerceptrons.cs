@@ -10,20 +10,22 @@ namespace ControleUtilisateurPerceptron.Modele
     /// - Tester le perceptron
     /// - Entrainer le perceptron
     /// </summary>
-    public class GestionClassesPerceptrons : IGestionPerceptron
+    public class GestionClassesPerceptrons
     {
         public static Dictionary<string, Perceptron> _lstPerceptrons;
         public static List<CoordDessin> _lstCoordonnes;
-        private IGestionFichiers _gestionFichiers;
+        private GestionFichiersSorties _gestionFichiers;
+        private double _constanteApprentissage;
 
         /// <summary>
         /// Constructeur
         /// </summary>
-        public GestionClassesPerceptrons()
+        public GestionClassesPerceptrons(double constanteApprentissage)
         {
             _lstPerceptrons = new Dictionary<string, Perceptron>();
             _lstCoordonnes = new List<CoordDessin>();
             _gestionFichiers = new GestionFichiersSorties();
+            _constanteApprentissage = constanteApprentissage;
         }
 
         /// <summary>
@@ -35,7 +37,7 @@ namespace ControleUtilisateurPerceptron.Modele
             _lstCoordonnes = _gestionFichiers.ChargerCoordonnees(fichier);
             foreach (CoordDessin c in _lstCoordonnes)
                 if (_lstPerceptrons.ContainsKey(c.Reponse) == false)
-                    _lstPerceptrons.Add(c.Reponse, new Perceptron(c.Reponse));
+                    _lstPerceptrons.Add(c.Reponse, new Perceptron(c.Reponse, _constanteApprentissage));
 
             foreach (Perceptron p in _lstPerceptrons.Values)
                 p.Entrainement(_lstCoordonnes);
@@ -63,7 +65,7 @@ namespace ControleUtilisateurPerceptron.Modele
         {
             string sConsole = "";
             if (_lstPerceptrons.ContainsKey(reponse) == false)
-                _lstPerceptrons.Add(reponse, new Perceptron(reponse));
+                _lstPerceptrons.Add(reponse, new Perceptron(reponse, _constanteApprentissage));
             coordo.Reponse = reponse;
             _lstCoordonnes.Add(coordo);
             
