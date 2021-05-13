@@ -12,6 +12,6 @@ namespace ControleUtilisateurPerceptron.Vue
         bool UtiliserNouveauFichier { get; set; }
         double ConstanteApprentissage { get; set; }
 
-        event EventHandler _entrainementEvt;
+        event EventHandler EntrainementEvt;
     }
 }

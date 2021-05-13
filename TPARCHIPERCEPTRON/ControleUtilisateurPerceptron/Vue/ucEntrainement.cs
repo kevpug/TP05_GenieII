@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ControleUtilisateurPerceptron.Presentation;
 
 namespace ControleUtilisateurPerceptron.Vue
 {
@@ -15,6 +16,7 @@ namespace ControleUtilisateurPerceptron.Vue
         private string _cheminFichierEntrainement = "";
         private bool _utiliserNouveauFichier;
         private double _constanteApprentissage;
+        private PresenteurucEntrainement _presentateur;
 
         [Category("Parametre Entrainement")]
         public string CheminFichierEntrainement
@@ -54,11 +56,13 @@ namespace ControleUtilisateurPerceptron.Vue
             }
         }
         [Category("Entrainement Events")]
-        public event EventHandler _entrainementEvt;
+        public event EventHandler EntrainementEvt;
 
         public ucEntrainement()
         {
             InitializeComponent();
+            _presentateur = new PresenteurucEntrainement(this);
+            
         }
 
         private void btnEntrainement_Click(object sender, EventArgs e)
