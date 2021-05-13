@@ -18,6 +18,12 @@ namespace ControleUtilisateurPerceptron.Presentation
             _vue = vue;
             _gestionClassesPerceptron = new GestionClassesPerceptrons(_vue.ConstanteApprentissage);
             _vue.EcritureEvt += Ecriture;
+            _vue.SauvegardeEvt += Sauvegarde;
+        }
+
+        private void Sauvegarde(object sender, EventArgs e)
+        {
+            _gestionClassesPerceptron.SauvegarderCoordonnees(_vue.CheminFichierEntrainement);
         }
 
         private void Ecriture(object sender, EventArgs e)

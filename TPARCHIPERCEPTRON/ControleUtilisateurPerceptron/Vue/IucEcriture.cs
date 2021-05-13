@@ -17,6 +17,9 @@ namespace ControleUtilisateurPerceptron.Vue
 
 
         event EventHandler EcritureEvt;
+        event EventHandler SauvegardeEvt;
+
+
 
 
 

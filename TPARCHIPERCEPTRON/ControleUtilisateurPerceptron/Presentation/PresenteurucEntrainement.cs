@@ -16,15 +16,23 @@ namespace ControleUtilisateurPerceptron.Presentation
         {
             _vue = vue;
             //Logique pour que la valeur ne soit pas a 0.00...
-            _gestionClassesPerceptron = new GestionClassesPerceptrons(_vue.ConstanteApprentissage == 0.00 ? 0.01 : _vue.ConstanteApprentissage);
-            if(!_vue.UtiliserNouveauFichier)
-                _gestionClassesPerceptron.ChargerCoordonnees(_vue.CheminFichierEntrainement);
             _vue.EntrainementEvt += Entrainement;
+            _vue.LoadEvt += Load;
+        }
+
+        private void Load(object sender, EventArgs e)
+        {
+            _gestionClassesPerceptron = new GestionClassesPerceptrons(_vue.ConstanteApprentissage == 0.00 ? 0.01 : _vue.ConstanteApprentissage);
+
+            if (!_vue.UtiliserNouveauFichier)
+                _gestionClassesPerceptron.ChargerCoordonnees(_vue.CheminFichierEntrainement);
+
         }
 
         private void Entrainement(object sender, EventArgs e)
         {
             _gestionClassesPerceptron.Entrainement(_vue.Dessin, _vue.ValeurEntrainement);
         }
+
     }
 }

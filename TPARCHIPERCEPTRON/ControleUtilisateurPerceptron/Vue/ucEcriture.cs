@@ -20,6 +20,8 @@ namespace ControleUtilisateurPerceptron.Vue
 
         public event EventHandler EcritureEvt;
         public event EventHandler SauvegardeEvt;
+        public event EventHandler LoadEvt;
+        Form _mainOwner;
 
         [Category("Parametre Ecriture")]
         public string CheminFichierEntrainement
@@ -54,11 +56,24 @@ namespace ControleUtilisateurPerceptron.Vue
             ucDessin.Height = CstApplication.TAILLEDESSINY;
         }
 
+        private void _mainOwner_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (SauvegardeEvt is object)
+                SauvegardeEvt(sender, e);
+        }
+
         private void btnOk_Click(object sender, EventArgs e)
         {
             if (EcritureEvt is object)
                 EcritureEvt(sender, e);
             ucDessin.EffacerDessin();
+        }
+
+        private void ucEcriture_Load(object sender, EventArgs e)
+        {
+            _mainOwner = FindForm();
+            _mainOwner.FormClosing += _mainOwner_FormClosing;
+
         }
     }
 }

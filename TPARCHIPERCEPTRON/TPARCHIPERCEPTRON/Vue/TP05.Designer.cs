@@ -36,7 +36,7 @@ namespace TPARCHIPERCEPTRON.Vue
             // 
             // ucEcriture1
             // 
-            this.ucEcriture1.CheminFichierEntrainement = "../FichierEntrainement.dat";
+            this.ucEcriture1.CheminFichierEntrainement = "FichierEntrainement.dat";
             this.ucEcriture1.ConstanteApprentissage = 0.01D;
             this.ucEcriture1.Location = new System.Drawing.Point(19, 195);
             this.ucEcriture1.modePhrase = true;
@@ -47,7 +47,7 @@ namespace TPARCHIPERCEPTRON.Vue
             // 
             // ucEntrainement1
             // 
-            this.ucEntrainement1.CheminFichierEntrainement = "../FichierEntrainement.dat";
+            this.ucEntrainement1.CheminFichierEntrainement = "FichierEntrainement.dat";
             this.ucEntrainement1.ConstanteApprentissage = 0.01D;
             this.ucEntrainement1.Location = new System.Drawing.Point(10, 2);
             this.ucEntrainement1.Name = "ucEntrainement1";
@@ -65,6 +65,7 @@ namespace TPARCHIPERCEPTRON.Vue
             this.Controls.Add(this.ucEntrainement1);
             this.Name = "TP05";
             this.Text = "Analyse écriture";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TP05_FormClosing);
             this.ResumeLayout(false);
 
         }

@@ -61,6 +61,7 @@ namespace ControleUtilisateurPerceptron.Vue
 
         [Category("Entrainement Events")]
         public event EventHandler EntrainementEvt;
+        public event EventHandler LoadEvt;
 
         public ucEntrainement()
         {
@@ -82,6 +83,12 @@ namespace ControleUtilisateurPerceptron.Vue
         private void btnEffacer_Click(object sender, EventArgs e)
         {
             ucDessin.EffacerDessin();
+        }
+
+        private void ucEntrainement_Load(object sender, EventArgs e)
+        {
+            if (LoadEvt is object)
+                LoadEvt(sender, e);
         }
     }
 }

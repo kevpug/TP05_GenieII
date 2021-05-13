@@ -15,5 +15,7 @@ namespace ControleUtilisateurPerceptron.Vue
         string ValeurEntrainement { get; }
 
         event EventHandler EntrainementEvt;
+        event EventHandler LoadEvt;
+
     }
 }

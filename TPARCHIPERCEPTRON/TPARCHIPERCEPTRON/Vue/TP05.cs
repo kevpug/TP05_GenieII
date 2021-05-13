@@ -21,5 +21,10 @@ namespace TPARCHIPERCEPTRON.Vue
         {
             //Code supplémentaire au besoin traitement bouton entrainement...
         }
+
+        private void TP05_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }
