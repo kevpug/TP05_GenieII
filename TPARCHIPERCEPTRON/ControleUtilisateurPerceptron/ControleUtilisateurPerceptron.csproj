@@ -52,6 +52,7 @@
     <Compile Include="Modele\IGestionFichiers.cs" />
     <Compile Include="Modele\IGestionPerceptron.cs" />
     <Compile Include="Modele\Perceptron.cs" />
+    <Compile Include="Presentation\PresenteurucEcriture.cs" />
     <Compile Include="Presentation\PresenteurucEntrainement.cs" />
     <Compile Include="Vue\IucEcriture.cs" />
     <Compile Include="Vue\IucEntrainement.cs" />
