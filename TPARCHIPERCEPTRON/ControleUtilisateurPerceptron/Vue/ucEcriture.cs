@@ -11,6 +11,11 @@ using System.Windows.Forms;
 
 namespace ControleUtilisateurPerceptron.Vue
 {
+    /// <summary>
+    /// Auteur : Kévin Pugliese, Arnaud Labrecque
+    /// Description: User control qui s'occupe de faire la logique de recognition de texte.
+    /// Date: 2020-05-12
+    /// </summary>
     public partial class ucEcriture : UserControl, IucEcriture
     {
         private string _cheminFichierEntrainement = "";
@@ -20,7 +25,6 @@ namespace ControleUtilisateurPerceptron.Vue
 
         public event EventHandler EcritureEvt;
         public event EventHandler SauvegardeEvt;
-        public event EventHandler LoadEvt;
         Form _mainOwner;
 
         [Category("Parametre Ecriture")]
@@ -47,7 +51,9 @@ namespace ControleUtilisateurPerceptron.Vue
         public string TextConsole { get => txtEcriture.Text; set => txtEcriture.Text = value; }
 
         public CoordDessin Dessin => ucDessin.Coordonnees;
-
+        /// <summary>
+        /// ctor
+        /// </summary>
         public ucEcriture()
         {
             InitializeComponent();
@@ -56,12 +62,22 @@ namespace ControleUtilisateurPerceptron.Vue
             ucDessin.Height = CstApplication.TAILLEDESSINY;
         }
 
+        /// <summary>
+        /// Quand le form parent se ferme, un évènement de sauvegarde s'execute.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _mainOwner_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (SauvegardeEvt is object)
                 SauvegardeEvt(sender, e);
         }
 
+        /// <summary>
+        /// Sert à lancer la recognition de lettre.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOk_Click(object sender, EventArgs e)
         {
             if (EcritureEvt is object)
@@ -69,6 +85,11 @@ namespace ControleUtilisateurPerceptron.Vue
             ucDessin.EffacerDessin();
         }
 
+        /// <summary>
+        /// On load event; va chercher le form owner et créer un evenement formclosing pour celui-ci.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ucEcriture_Load(object sender, EventArgs e)
         {
             _mainOwner = FindForm();

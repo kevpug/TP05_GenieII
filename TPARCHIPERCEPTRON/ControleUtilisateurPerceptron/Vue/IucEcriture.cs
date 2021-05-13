@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace ControleUtilisateurPerceptron.Vue
 {
+    /// <summary>
+    /// Auteur : Kévin Pugliese, Arnaud Labrecque
+    /// Description: Interface pour le UI(ucÉcriture).
+    /// Date: 2020-05-12
+    /// </summary>
     public interface IucEcriture
     {
 

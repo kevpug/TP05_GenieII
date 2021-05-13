@@ -11,6 +11,11 @@ using ControleUtilisateurPerceptron.Presentation;
 
 namespace ControleUtilisateurPerceptron.Vue
 {
+    /// <summary>
+    /// Auteur : Kévin Pugliese, Arnaud Labrecque
+    /// Description: User control qui s'occupe de faire la logique d'entrainement à la recognition de texte.
+    /// Date: 2020-05-12
+    /// </summary>
     public partial class ucEntrainement : UserControl, IucEntrainement
     {
         private string _cheminFichierEntrainement = "";
@@ -62,7 +67,9 @@ namespace ControleUtilisateurPerceptron.Vue
         [Category("Entrainement Events")]
         public event EventHandler EntrainementEvt;
         public event EventHandler LoadEvt;
-
+        /// <summary>
+        /// ctor
+        /// </summary>
         public ucEntrainement()
         {
             InitializeComponent();
@@ -71,7 +78,11 @@ namespace ControleUtilisateurPerceptron.Vue
             ucDessin.Height = CstApplication.TAILLEDESSINY;
 
         }
-
+        /// <summary>
+        /// Execute l'action d'entraîner les perceptrons
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEntrainement_Click(object sender, EventArgs e)
         {
             if (EntrainementEvt is object)
@@ -79,12 +90,20 @@ namespace ControleUtilisateurPerceptron.Vue
             ucDessin.EffacerDessin();
 
         }
-
+        /// <summary>
+        /// Reset le dessin.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEffacer_Click(object sender, EventArgs e)
         {
             ucDessin.EffacerDessin();
         }
-
+        /// <summary>
+        /// Lance l'action pour loader les perceptrons.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ucEntrainement_Load(object sender, EventArgs e)
         {
             if (LoadEvt is object)
