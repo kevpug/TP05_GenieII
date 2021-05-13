@@ -1,4 +1,4 @@
-﻿namespace ControleUtilisateurPerceptron
+﻿namespace ControleUtilisateurPerceptron.Vue
 {
     partial class ucEntrainement
     {
@@ -30,7 +30,7 @@
         {
             this.grpZoneDessin = new System.Windows.Forms.GroupBox();
             this.btnEffacer = new System.Windows.Forms.Button();
-            this.ucZoneDessin1 = new ControleUtilisateurPerceptron.ucZoneDessin();
+            this.ucZoneDessin1 = new ucZoneDessin();
             this.lblValeur = new System.Windows.Forms.Label();
             this.btnEntrainement = new System.Windows.Forms.Button();
             this.txtEntrainement = new System.Windows.Forms.TextBox();

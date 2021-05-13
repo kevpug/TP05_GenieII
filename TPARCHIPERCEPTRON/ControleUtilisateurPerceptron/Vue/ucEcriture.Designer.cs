@@ -1,5 +1,5 @@
 ﻿
-namespace ControleUtilisateurPerceptron
+namespace ControleUtilisateurPerceptron.Vue
 {
     partial class ucEcriture
     {
@@ -30,7 +30,7 @@ namespace ControleUtilisateurPerceptron
         private void InitializeComponent()
         {
             this.grpDessin = new System.Windows.Forms.GroupBox();
-            this.ucZoneDessin1 = new ControleUtilisateurPerceptron.ucZoneDessin();
+            this.ucZoneDessin1 = new ucZoneDessin();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnOk = new System.Windows.Forms.Button();
             this.txtEcriture = new System.Windows.Forms.TextBox();

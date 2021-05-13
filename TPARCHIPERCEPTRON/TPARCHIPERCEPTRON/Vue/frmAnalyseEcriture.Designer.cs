@@ -1,4 +1,4 @@
-﻿using ControleUtilisateurPerceptron;
+﻿using ControleUtilisateurPerceptron.Vue;
 
 namespace TPARCHIPERCEPTRON
 {

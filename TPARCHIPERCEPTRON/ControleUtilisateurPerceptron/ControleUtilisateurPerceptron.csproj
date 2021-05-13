@@ -8,10 +8,11 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ControleUtilisateurPerceptron</RootNamespace>
     <AssemblyName>ControleUtilisateurPerceptron</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,37 +52,41 @@
     <Compile Include="Modele\IGestionFichiers.cs" />
     <Compile Include="Modele\IGestionPerceptron.cs" />
     <Compile Include="Modele\Perceptron.cs" />
-    <Compile Include="ucEcriture.cs">
+    <Compile Include="Vue\IucEntrainement.cs" />
+    <Compile Include="Vue\ucEcriture.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucEcriture.Designer.cs">
+    <Compile Include="Vue\ucEcriture.Designer.cs">
       <DependentUpon>ucEcriture.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucEntrainement.cs">
+    <Compile Include="Vue\ucEntrainement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucEntrainement.Designer.cs">
+    <Compile Include="Vue\ucEntrainement.Designer.cs">
       <DependentUpon>ucEntrainement.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucZoneDessin.cs">
+    <Compile Include="Vue\ucZoneDessin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucZoneDessin.Designer.cs">
+    <Compile Include="Vue\ucZoneDessin.Designer.cs">
       <DependentUpon>ucZoneDessin.cs</DependentUpon>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ucEcriture.resx">
+    <EmbeddedResource Include="Vue\ucEcriture.resx">
       <DependentUpon>ucEcriture.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucEntrainement.resx">
+    <EmbeddedResource Include="Vue\ucEntrainement.resx">
       <DependentUpon>ucEntrainement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucZoneDessin.resx">
+    <EmbeddedResource Include="Vue\ucZoneDessin.resx">
       <DependentUpon>ucZoneDessin.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

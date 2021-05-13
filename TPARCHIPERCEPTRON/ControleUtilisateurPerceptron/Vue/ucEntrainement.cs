@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ControleUtilisateurPerceptron
+namespace ControleUtilisateurPerceptron.Vue
 {
     public partial class ucEntrainement : UserControl
     {

@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ControleUtilisateurPerceptron
+namespace ControleUtilisateurPerceptron.Vue
 {
     /// <summary>
     /// Contrôle utilisateur qui permet de créer une petite interface pour dessiner un caractère. 
