@@ -12,6 +12,12 @@ namespace ControleUtilisateurPerceptron.Vue
         string CheminFichierEntrainement { get; set; }
         bool modePhrase { get; set; }
         double ConstanteApprentissage { get; set; }
+        string TextConsole { get;  set; }
+        CoordDessin Dessin { get; }
+
+
+        event EventHandler EcritureEvt;
+
 
 
     }

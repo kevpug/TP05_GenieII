@@ -55,6 +55,10 @@ namespace ControleUtilisateurPerceptron.Vue
                 _constanteApprentissage = value;
             }
         }
+
+        public CoordDessin Dessin { get => ucDessin.Coordonnees; }
+        public string ValeurEntrainement { get => txtEntrainement.Text; }
+
         [Category("Entrainement Events")]
         public event EventHandler EntrainementEvt;
 
@@ -62,21 +66,22 @@ namespace ControleUtilisateurPerceptron.Vue
         {
             InitializeComponent();
             _presentateur = new PresenteurucEntrainement(this);
-            
+            ucDessin.Width = CstApplication.TAILLEDESSINX;
+            ucDessin.Height = CstApplication.TAILLEDESSINY;
+
         }
 
         private void btnEntrainement_Click(object sender, EventArgs e)
         {
             if (EntrainementEvt is object)
-            {
                 EntrainementEvt(sender, e);
-                //Logique application ici pour entrainement
-            }
 
         }
         private void btnEffacer_Click(object sender, EventArgs e)
         {
-
+            ucDessin.EffacerDessin();
         }
+
+        
     }
 }

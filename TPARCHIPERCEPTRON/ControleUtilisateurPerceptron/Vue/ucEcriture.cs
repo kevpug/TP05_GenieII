@@ -18,29 +18,45 @@ namespace ControleUtilisateurPerceptron.Vue
         private double _constanteApprentissage;
         private PresenteurucEcriture _presentateur;
 
+        public event EventHandler EcritureEvt;
 
         [Category("Parametre Ecriture")]
-        public string CheminFichierEntrainement 
-        { get { return _cheminFichierEntrainement; }
+        public string CheminFichierEntrainement
+        {
+            get { return _cheminFichierEntrainement; }
             set { _cheminFichierEntrainement = value; }
         }
 
         [Category("Parametre Ecriture")]
-        public bool modePhrase 
-        { get { return _modePhrase; }
-            set { _modePhrase = value; } 
+        public bool modePhrase
+        {
+            get { return _modePhrase; }
+            set { _modePhrase = value; }
         }
 
         [Category("Parametre Ecriture")]
         public double ConstanteApprentissage
-        { get { return _constanteApprentissage; }
-            set { _constanteApprentissage = value; } 
+        {
+            get { return _constanteApprentissage; }
+            set { _constanteApprentissage = value; }
         }
+
+        public string TextConsole { get => txtEcriture.Text; set => txtEcriture.Text = value; }
+
+        public CoordDessin Dessin => ucDessin.Coordonnees;
 
         public ucEcriture()
         {
             InitializeComponent();
             _presentateur = new PresenteurucEcriture(this);
+            ucDessin.Width = CstApplication.TAILLEDESSINX;
+            ucDessin.Height = CstApplication.TAILLEDESSINY;
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            if (EcritureEvt is object)
+                EcritureEvt(sender, e);
         }
     }
 }

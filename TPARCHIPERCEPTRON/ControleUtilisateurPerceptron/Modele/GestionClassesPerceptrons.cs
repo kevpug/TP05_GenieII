@@ -12,8 +12,8 @@ namespace ControleUtilisateurPerceptron.Modele
     /// </summary>
     public class GestionClassesPerceptrons : IGestionPerceptron
     {
-        private Dictionary<string, Perceptron> _lstPerceptrons;
-        private List<CoordDessin> _lstCoordonnes;
+        public static Dictionary<string, Perceptron> _lstPerceptrons;
+        public static List<CoordDessin> _lstCoordonnes;
         private IGestionFichiers _gestionFichiers;
 
         /// <summary>

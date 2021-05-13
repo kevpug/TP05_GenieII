@@ -30,7 +30,7 @@
         {
             this.grpZoneDessin = new System.Windows.Forms.GroupBox();
             this.btnEffacer = new System.Windows.Forms.Button();
-            this.ucZoneDessin1 = new ucZoneDessin();
+            this.ucDessin = new ucZoneDessin();
             this.lblValeur = new System.Windows.Forms.Label();
             this.btnEntrainement = new System.Windows.Forms.Button();
             this.txtEntrainement = new System.Windows.Forms.TextBox();
@@ -40,7 +40,7 @@
             // grpZoneDessin
             // 
             this.grpZoneDessin.Controls.Add(this.btnEffacer);
-            this.grpZoneDessin.Controls.Add(this.ucZoneDessin1);
+            this.grpZoneDessin.Controls.Add(this.ucDessin);
             this.grpZoneDessin.Location = new System.Drawing.Point(27, 28);
             this.grpZoneDessin.Name = "grpZoneDessin";
             this.grpZoneDessin.Size = new System.Drawing.Size(195, 140);
@@ -59,11 +59,11 @@
             // 
             // ucZoneDessin1
             // 
-            this.ucZoneDessin1.BackColor = System.Drawing.Color.White;
-            this.ucZoneDessin1.Location = new System.Drawing.Point(6, 33);
-            this.ucZoneDessin1.Name = "ucZoneDessin1";
-            this.ucZoneDessin1.Size = new System.Drawing.Size(64, 64);
-            this.ucZoneDessin1.TabIndex = 0;
+            this.ucDessin.BackColor = System.Drawing.Color.White;
+            this.ucDessin.Location = new System.Drawing.Point(6, 33);
+            this.ucDessin.Name = "ucZoneDessin1";
+            this.ucDessin.Size = new System.Drawing.Size(64, 64);
+            this.ucDessin.TabIndex = 0;
             // 
             // lblValeur
             // 
@@ -110,7 +110,7 @@
 
         private System.Windows.Forms.GroupBox grpZoneDessin;
         private System.Windows.Forms.Button btnEffacer;
-        private ucZoneDessin ucZoneDessin1;
+        private ucZoneDessin ucDessin;
         private System.Windows.Forms.Label lblValeur;
         private System.Windows.Forms.Button btnEntrainement;
         private System.Windows.Forms.TextBox txtEntrainement;
